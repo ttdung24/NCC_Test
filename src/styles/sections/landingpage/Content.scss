@@ -1,0 +1,66 @@
+@use '../../base.scss' as s;
+
+.content {
+  margin: 0 auto;
+  width: 84.5%;
+  overflow: auto;
+  padding-bottom: 79px;
+  @include s.media(mobile, tablet) {
+    padding-bottom: 129px;
+  }
+  .content__logo {
+    margin-top: 20px;
+    padding-top: 122px;
+    background: url('../../../../public/img/logoNCC\ 1.png') no-repeat center;
+  }
+  .content__overview {
+    margin-top: 30px;
+    background: #efefef;
+    padding: 38px 18%;
+    .content__overview-header {
+      text-align: center;
+      color: #000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 21px;
+    }
+    .content__overview-description {
+      margin-top: 18px;
+      color: #000;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .content__description {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .description-item {
+      width: 31%;
+      @include s.media (tablet) {
+        width: 100%;
+      }
+      overflow: auto;
+      .item__header {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .item__content {
+        margin-top: 18px;
+        .item__img {
+          float: left;
+          margin-right: 16px;
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+}

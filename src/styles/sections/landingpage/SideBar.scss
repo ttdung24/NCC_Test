@@ -1,0 +1,49 @@
+@use '../../base.scss' as s;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  background-color: #191718;
+  height: 100vh;
+  @include s.media(tablet) {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+  .nav-list {
+    .nav-list__item {
+      width: 100%;
+      height: 44px;
+      padding: 14px 0 0 16px;
+      border-bottom: 1px solid #5c5c5c;
+      cursor: pointer;
+      @include s.media(tablet) {
+        text-align: center;
+      }
+      a {
+        color: #aaaaaa;
+        font-size: 16px;
+        line-height: 18.75px;
+        font-weight: 700;
+      }
+    }
+
+    .nav-list__item:hover {
+      background-color: #5c5c5c;
+      a {
+        color: #ffffff;
+      }
+    }
+
+    .nav-list__item:nth-child(1) a,
+    .nav-list__item:nth-child(3) a {
+      color: #ffffff;
+    }
+
+    .nav-list__item:nth-child(3) {
+      background-color: #5c5c5c;
+    }
+  }
+}

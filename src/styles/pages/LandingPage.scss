@@ -1,0 +1,13 @@
+@use '../base.scss' as s;
+
+.landingpage {
+  position: relative;
+  .main-content {
+    position: relative;
+    margin-left: 150px;
+    min-height: 100vh;
+    @include s.media(tablet) {
+        margin-left: 0;
+    }
+  }
+}
